@@ -1,0 +1,41 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    color: white;
+    font-size: 30px;
+}
+
+.filhote {
+    background-image: url(media/filhote.jpg);
+    height: 1000px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.crescendo {
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    display: flex;
+    height: 250px;
+}
+
+.adulto {
+    background-image: url(media/adulto.jpg);
+    height: 1000px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

@@ -1,0 +1,15 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 50vh 0;
+    padding: 0;
+    transition: background-color 0.5s ease; /* Adiciona uma transição suave */
+    overflow: hidden;
+    justify-content: center;
+    display: flex;
+}
+#btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}

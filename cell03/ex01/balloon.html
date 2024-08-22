@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex01</title>
+    <style>
+        body {
+            margin: 40vh 0;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+        }
+        #balloon {
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <button id="balloon" onmouseleave="deflateBalloon()"></button>        
+    </div>
+    <script>
+        
+        /*captura e variavel de start*/
+        let inflateBalloon = document.getElementById('balloon');
+        const initialSize = 200;
+        let currentSize = initialSize;
+
+        /*inflar balao*/
+        inflateBalloon.addEventListener("click", function () {
+        if (currentSize<420){
+            currentSize+=10;
+            inflateBalloon.style.width = `${currentSize}px`
+            inflateBalloon.style.height = `${currentSize}px`
+        } else{
+            currentSize = initialSize;
+            inflateBalloon.style.width = `${currentSize}px`
+            inflateBalloon.style.height = `${currentSize}px`
+        }
+        
+        /*alterar cor*/
+        if(inflateBalloon.style.backgroundColor == "rgb(255, 0, 0)"){
+           inflateBalloon.style.backgroundColor = "rgb(0, 255, 0)";
+        } else if (inflateBalloon.style.backgroundColor == "rgb(0, 255, 0)"){ 
+            inflateBalloon.style.backgroundColor = "rgb(0, 0, 255)";
+        }else { 
+            inflateBalloon.style.backgroundColor = "rgb(255, 0, 0)";
+        } 
+        })
+
+        /*desinflar o balao*/
+        function deflateBalloon(){
+            if (currentSize > 200){
+                currentSize -=5;
+                inflateBalloon.style.width = `${currentSize}px`
+                inflateBalloon.style.height = `${currentSize}px`
+            }
+            if(inflateBalloon.style.backgroundColor == "rgb(0, 0, 255)"){
+           inflateBalloon.style.backgroundColor = "rgb(0, 255, 0)";
+        } else if (inflateBalloon.style.backgroundColor == "rgb(0, 255, 0)"){ 
+            inflateBalloon.style.backgroundColor = "rgb(255, 0, 0)";
+        }else { 
+            inflateBalloon.style.backgroundColor = "rgb(0, 0, 255)";
+        }
+        }
+        
+    </script>
+</body>
+</html>

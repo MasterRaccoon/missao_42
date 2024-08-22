@@ -1,0 +1,17 @@
+body{
+    background-color:rgb(0,0,0);
+    display: flex;
+    justify-content: center;
+    transition: background-color 0.5s ease;
+    margin: 50vh 0;
+}
+
+#btn{
+    font-family: monospace;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: white;
+    color:black;
+    width: 200px;
+    height: 100px;
+}

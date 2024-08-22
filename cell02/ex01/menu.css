@@ -1,0 +1,44 @@
+.menu {
+    background-color: rgb(0, 0, 0);
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding:5px;
+    margin:0px;
+}
+.menu:hover {
+    background-color: rgb(255, 255, 255);
+    color: black;
+}
+.suspenso {                     /*definindo estilo para um contenier q tera menu suspenso*/
+    position: relative;         /* position relative será necessário para o correto posicionamento do submenu.*/
+    display: inline-block; 
+}
+.suspenso2 {                    
+    display: none;
+    min-width: 500px;
+}
+.suspenso2 li {
+    color: white;
+    padding: 20px;
+    text-decoration: none;
+    display: block;
+}
+.suspenso:hover .suspenso2 {
+    display: block;
+}
+#Pão {
+    background-color: #a63e12;
+}
+#Alface {
+    background-color: #519c21;
+}
+#Tomate {
+    background-color: #9e2b13;
+}
+#Queijo {
+    background-color: #f98326 ;
+}
+#Carne {
+    background-color: #64250e;
+}

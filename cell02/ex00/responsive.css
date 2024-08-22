@@ -1,0 +1,21 @@
+body {
+    display: flex;
+    justify-content: center;
+    padding: 0px;
+    margin: 0px;
+}
+table, th, td {
+    text-align: center;
+    height: 100vh;
+    width: 100vw;
+    border: 5px solid black;
+    border-collapse: collapse;
+}
+#cell1 {
+    background-color: #c3c77e;
+    width: 50%;
+}
+#cell2 {
+    background-color: #f9c4af;
+    width: 50%;
+}
