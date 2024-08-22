@@ -1,20 +1,29 @@
 body {
     display: flex;
     justify-content: center;
-    padding: 0px;
-    margin: 0px;
+    align-items: center; /* Centraliza verticalmente a tabela */
+    padding: 0;
+    margin: 0;
+    background-color: #454545; /* Adiciona uma cor de fundo para melhorar a visualização */
 }
-table, th, td {
-    text-align: center;
+
+table {
     height: 100vh;
     width: 100vw;
     border: 5px solid black;
     border-collapse: collapse;
 }
+
+td {
+    text-align: center;
+    border: 5px solid black;
+}
+
 #cell1 {
     background-color: #c3c77e;
     width: 50%;
 }
+
 #cell2 {
     background-color: #f9c4af;
     width: 50%;

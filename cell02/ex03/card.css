@@ -4,18 +4,27 @@ body {
     display: flex;
     background-color: black;
     color: white;
+    min-height: 100vh; /* Garante que o corpo ocupe toda a altura da tela */
+    margin: 0; /* Remove a margem padrão */
+    padding: 0; /* Remove o preenchimento padrão */
 }
 
 table {
     border-collapse: collapse;
+    margin: auto; /* Centraliza a tabela */
+    background-color: #333; /* Adiciona cor de fundo para a tabela */
+    border-radius: 10px; /* Adiciona bordas arredondadas */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Adiciona sombra */
 }
 
 td {
     text-align: center;
+    padding: 15px; /* Adiciona preenchimento interno */
 }
 
 .top {
     border-top: 5px solid white;
+    font-weight: bold; /* Destaca o título */
 }
 
 .borders {
@@ -29,10 +38,6 @@ td {
 
 a {
     color: white;
-    color: inherit;
-}
-
-a:link {
     text-decoration: none;
 }
 

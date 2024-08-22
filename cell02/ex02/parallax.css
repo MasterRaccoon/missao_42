@@ -1,17 +1,20 @@
 body {
     margin: 0;
     padding: 0;
+    font-family: Arial, sans-serif; /* Adiciona uma fonte padrão */
 }
 
 p {
     color: white;
     font-size: 30px;
+    margin: 0; /* Remove margens padrão dos parágrafos */
+    text-align: center; /* Centraliza o texto */
 }
 
 .filhote {
     background-image: url(media/filhote.jpg);
-    height: 1000px;
-    background-attachment: fixed;
+    height: 100vh; /* Ajusta a altura para 100% da altura da viewport */
+    background-attachment: fixed; /* Cria o efeito parallax */
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -21,17 +24,17 @@ p {
 }
 
 .crescendo {
+    background-color: black;
+    height: 250px;
+    display: flex;
     align-items: center;
     justify-content: center;
-    background-color: black;
-    display: flex;
-    height: 250px;
 }
 
 .adulto {
     background-image: url(media/adulto.jpg);
-    height: 1000px;
-    background-attachment: fixed;
+    height: 100vh; /* Ajusta a altura para 100% da altura da viewport */
+    background-attachment: fixed; /* Cria o efeito parallax */
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;

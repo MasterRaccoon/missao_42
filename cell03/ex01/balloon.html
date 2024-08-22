@@ -6,68 +6,65 @@
     <title>ex01</title>
     <style>
         body {
-            margin: 40vh 0;
-            overflow: hidden;
+            margin: 0;
+            height: 100vh;
             display: flex;
             justify-content: center;
+            align-items: center;
+            background-color: #f0f0f0; /* Cor de fundo opcional */
         }
         #balloon {
             width: 200px;
             height: 200px;
             background-color: red;
             border-radius: 50%;
+            border: 5px solid black; /* Adiciona uma borda preta de 5 pixels */
+            cursor: pointer; /* Adiciona o cursor de pointer para indicar clicabilidade */
         }
     </style>
 </head>
 <body>
-    <div>
-        <button id="balloon" onmouseleave="deflateBalloon()"></button>        
-    </div>
+    <button id="balloon" onmouseleave="deflateBalloon()"></button>
     <script>
-        
-        /*captura e variavel de start*/
-        let inflateBalloon = document.getElementById('balloon');
+        // Seleciona o botão e define variáveis
+        const balloon = document.getElementById('balloon');
         const initialSize = 200;
         let currentSize = initialSize;
 
-        /*inflar balao*/
-        inflateBalloon.addEventListener("click", function () {
-        if (currentSize<420){
-            currentSize+=10;
-            inflateBalloon.style.width = `${currentSize}px`
-            inflateBalloon.style.height = `${currentSize}px`
-        } else{
-            currentSize = initialSize;
-            inflateBalloon.style.width = `${currentSize}px`
-            inflateBalloon.style.height = `${currentSize}px`
-        }
-        
-        /*alterar cor*/
-        if(inflateBalloon.style.backgroundColor == "rgb(255, 0, 0)"){
-           inflateBalloon.style.backgroundColor = "rgb(0, 255, 0)";
-        } else if (inflateBalloon.style.backgroundColor == "rgb(0, 255, 0)"){ 
-            inflateBalloon.style.backgroundColor = "rgb(0, 0, 255)";
-        }else { 
-            inflateBalloon.style.backgroundColor = "rgb(255, 0, 0)";
-        } 
-        })
-
-        /*desinflar o balao*/
-        function deflateBalloon(){
-            if (currentSize > 200){
-                currentSize -=5;
-                inflateBalloon.style.width = `${currentSize}px`
-                inflateBalloon.style.height = `${currentSize}px`
+        // Função para gerar uma cor aleatória em formato hexadecimal
+        function getRandomColor() {
+            const letters = '0123456789ABCDEF';
+            let color = '#';
+            for (let i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
             }
-            if(inflateBalloon.style.backgroundColor == "rgb(0, 0, 255)"){
-           inflateBalloon.style.backgroundColor = "rgb(0, 255, 0)";
-        } else if (inflateBalloon.style.backgroundColor == "rgb(0, 255, 0)"){ 
-            inflateBalloon.style.backgroundColor = "rgb(255, 0, 0)";
-        }else { 
-            inflateBalloon.style.backgroundColor = "rgb(0, 0, 255)";
+            return color;
         }
+
+        // Função para inflar o balão
+        balloon.addEventListener("click", function () {
+            if (currentSize < 420) {
+                currentSize += 10;
+                balloon.style.width = `${currentSize}px`;
+                balloon.style.height = `${currentSize}px`;
+            } else {
+                currentSize = initialSize;
+                balloon.style.width = `${currentSize}px`;
+                balloon.style.height = `${currentSize}px`;
+            }
+
+            // Muda a cor do balão para uma cor aleatória
+            balloon.style.backgroundColor = getRandomColor();
+        });
+
+        // Função para desinflar o balão
+        function deflateBalloon() {
+            if (currentSize > initialSize) {
+                currentSize -= 5;
+                balloon.style.width = `${currentSize}px`;
+                balloon.style.height = `${currentSize}px`;
+            }
         }
-        
     </script>
 </body>
 </html>

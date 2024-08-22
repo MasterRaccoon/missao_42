@@ -3,42 +3,61 @@
     color: white;
     border: none;
     cursor: pointer;
-    padding:5px;
-    margin:0px;
+    padding: 10px 20px; /* Aumenta o padding do botão */
+    margin: 0;
+    font-size: 16px; /* Aumenta o tamanho da fonte do botão */
 }
+
 .menu:hover {
     background-color: rgb(255, 255, 255);
     color: black;
 }
-.suspenso {                     /*definindo estilo para um contenier q tera menu suspenso*/
-    position: relative;         /* position relative será necessário para o correto posicionamento do submenu.*/
+
+.suspenso {                     
+    position: relative;        
     display: inline-block; 
 }
+
 .suspenso2 {                    
     display: none;
-    min-width: 500px;
+    position: absolute; /* Posiciona o submenu em relação ao botão de menu */
+    min-width: 300px; /* Aumenta a largura mínima do submenu */
+    background-color: #333; /* Define a cor de fundo do submenu */
+    padding: 0; /* Remove o preenchimento interno da lista */
+    margin: 0; /* Remove a margem da lista */
+    list-style-type: none; /* Remove os marcadores da lista */
 }
-.suspenso2 li {
+
+.suspenso2 .item {
     color: white;
-    padding: 20px;
+    padding: 15px 20px; /* Aumenta o padding das células do menu */
+    text-align: center; /* Centraliza o texto dos itens */
     text-decoration: none;
     display: block;
+    font-size: 18px; /* Aumenta o tamanho da fonte dos itens do menu */
+    width: 100%; /* Faz com que o item ocupe toda a largura do submenu */
 }
+
 .suspenso:hover .suspenso2 {
     display: block;
 }
-#Pão {
+
+#Pao {
     background-color: #a63e12;
 }
+
 #Alface {
     background-color: #519c21;
 }
+
 #Tomate {
     background-color: #9e2b13;
 }
+
 #Queijo {
-    background-color: #f98326 ;
+    background-color: #f98326;
 }
+
 #Carne {
     background-color: #64250e;
 }
